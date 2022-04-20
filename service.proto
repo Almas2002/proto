@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./;";
+
+message QueryRequest {
+    int64 id = 1;
+}
+
+message QueryResponse {
+    string text = 1;
+}
+
+service AddService {
+    rpc Id(QueryRequest) returns (QueryResponse);
+}
+
